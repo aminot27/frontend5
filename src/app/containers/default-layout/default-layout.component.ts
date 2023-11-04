@@ -43,6 +43,20 @@ export class DefaultLayoutComponent implements OnInit {
           color: 'info',
           text: 'NEW'
         }
+      },
+      {
+        title: true,
+        name: 'Gestión de Almacén'
+      },
+      {
+        name: 'Categoría',
+        url: '/management/category',
+        iconComponent: { name: 'cil-list' }
+      },
+      {
+        name: 'Subcategoría',
+        url: '/management/subcategory',
+        iconComponent: { name: 'cil-list' }
       }
     ]
     const modules = selectedRol.modules;
