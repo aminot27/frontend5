@@ -5,6 +5,10 @@ table {
   button{
     margin: 2px;
   }
+
+  button mat-icon {
+    margin-right: -4px;
+  }
   
   th{
     background-color: #46546c !important;
