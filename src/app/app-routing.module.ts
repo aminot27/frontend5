@@ -27,6 +27,12 @@ const routes: Routes = [
           import('./views/dashboard/dashboard.module').then((m) => m.DashboardModule),
         canActivate: [AuthenticationGuard]
       },
+      {
+        path: 'management',
+        loadChildren: () =>
+          import('./views/product-management/product-management.module').then((m) => m.ProductManagementModule),
+        canActivate: [AuthenticationGuard]
+      },
       // {
       //   path: 'theme',
       //   loadChildren: () =>
@@ -72,7 +78,7 @@ const routes: Routes = [
         loadChildren: () =>
           import('./views/pages/pages.module').then((m) => m.PagesModule),
         canActivate: [AuthenticationGuard]
-      },
+      }
     ]
   },
   {
