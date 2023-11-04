@@ -11,6 +11,9 @@ $enable-rtl: true;
 // Import Chart.js custom tooltips styles
 @import "@coreui/chartjs/scss/coreui-chartjs";
 
+// Import angular material theme
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
 // perfect scrollbar theming for use with [perfectScrollbar] directive
 //@import '~perfect-scrollbar/css/perfect-scrollbar.css';
 
@@ -33,3 +36,6 @@ $enable-rtl: true;
 @import 'bootstrap/scss/variables';
 @import 'bootstrap/scss/mixins';
 //
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

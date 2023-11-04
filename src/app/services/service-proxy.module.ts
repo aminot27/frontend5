@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {environment} from '../../environments/environment';
 import * as SecurityService from './security/security.service';
+import {CategoryService} from '../services/api/category.service'
 
 
 @NgModule({
