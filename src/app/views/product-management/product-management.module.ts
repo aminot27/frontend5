@@ -18,6 +18,10 @@ import { CategoryListComponent } from './category/category-list/category-list.co
 import { CategoryUpdateComponent } from './category/category-update/category-update.component';
 import { CategoryDeleteComponent } from './category/category-delete/category-delete.component';
 import { CategoryAddComponent } from './category/category-add/category-add.component';
+import { SubcategoryAddComponent } from './subcategory/subcategory-add/subcategory-add.component';
+import { SubcategoryDeleteComponent } from './subcategory/subcategory-delete/subcategory-delete.component';
+import { SubcategoryListComponent } from './subcategory/subcategory-list/subcategory-list.component';
+import { SubcategoryUpdateComponent } from './subcategory/subcategory-update/subcategory-update.component';
 
 
 @NgModule({
@@ -28,7 +32,11 @@ import { CategoryAddComponent } from './category/category-add/category-add.compo
     CategoryListComponent,
     CategoryUpdateComponent,
     CategoryDeleteComponent,
-    CategoryAddComponent
+    CategoryAddComponent,
+    SubcategoryAddComponent,
+    SubcategoryDeleteComponent,
+    SubcategoryListComponent,
+    SubcategoryUpdateComponent
   ],
   imports: [
     CommonModule,
