@@ -15,7 +15,7 @@
                   <input autoComplete="username" cFormControl formControlName="username"
                          placeholder="Nro Documento"/>
                 </c-input-group>
-                <c-input-group class="mb-4" *ngIf="isRegistered">
+                <c-input-group class="mb-4" *ngIf="!isRegistered">
                   <span cInputGroupText>
                     <svg cIcon name="cilLockLocked"></svg>
                   </span>
@@ -28,7 +28,7 @@
                     (keydown.enter)="login()"
                   />
                 </c-input-group>
-                <c-row *ngIf="isRegistered">
+                <c-row *ngIf="!isRegistered">
                   <c-col xs="6">
                     <button cButton class="px-4" color="primary" (click)="login()" (keydown.enter)="login()">
                       Ingresar
