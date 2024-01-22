@@ -8,6 +8,7 @@ export interface IModuleModel extends IBaseModel {
   order: number;
   icon: string;
   code: string;
+  url: string;
   views: ViewModel[];
 }
 
@@ -18,6 +19,7 @@ export class ModuleModel implements IModuleModel {
   order: number;
   icon: string;
   code: string;
+  url: string;
   views: ViewModel[];
 
   constructor(data?: IModuleModel) {
@@ -32,11 +34,12 @@ export class ModuleModel implements IModuleModel {
   init(_data?: any): void {
     if (_data) {
       this.moduleId = _data['module_id'];
-      this.module = _data['module'];
+      this.module = _data['name'];
       this.description = _data['description'];
       this.order = _data['order'];
       this.icon = _data['icon'];
-      this.code = _data['code']
+      this.code = _data['code'];
+      this.url = _data['url'];
       this.views = _data['views'] instanceof Array ? _data['views'].map(view => new ViewModel(view)) : [];
     }
   }

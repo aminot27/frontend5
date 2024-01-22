@@ -5,6 +5,7 @@ export interface ISubcategory {
   status: string; 
   code: string; 
   description: string; 
+  categoryDescription?: string;
   order: number; 
-  category_id: number; 
+  category: number; 
 }

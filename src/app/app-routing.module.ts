@@ -28,10 +28,69 @@ const routes: Routes = [
         canActivate: [AuthenticationGuard]
       },
       {
-        path: 'management',
+        path: 'category',
         loadChildren: () =>
-          import('./views/product-management/product-management.module').then((m) => m.ProductManagementModule),
-        canActivate: [AuthenticationGuard]
+          import('./views/category/category.module').then((m) => m.CategoryModule),
+      },
+      {
+        path: 'subcategory',
+        loadChildren: () =>
+          import('./views/subcategory/subcategory.module').then((m) => m.SubcategoryModule),
+      },
+      {
+        path: 'unit',
+        loadChildren: () =>
+          import('./views/unit/unit.module').then((m) => m.UnitModule),
+      },
+      {
+        path: 'presentation',
+        loadChildren: () =>
+          import('./views/presentation/presentation.module').then((m) => m.PresentationModule),
+      },
+      {
+        path: 'product-input',
+        loadChildren: () =>
+          import('./views/product-input/product-input.module').then((m) => m.ProductInputModule),
+      },
+      {
+        path: 'product-output',
+        loadChildren: () =>
+          import('./views/product-output/product-output.module').then((m) => m.ProductOutputModule),
+      },
+      {
+        path: 'product',
+        loadChildren: () =>
+          import('./views/product/product.module').then((m) => m.ProductModule),
+      },
+      {
+        path: 'brand',
+        loadChildren: () =>
+          import('./views/brand/brand.module').then((m) => m.BrandModule),
+      },
+      {
+        path: 'product-subcategory',
+        loadChildren: () =>
+          import('./views/product-subcategory/product-subcategory.module').then((m) => m.ProductSubcategoryModule),
+      },
+      {
+        path: 'product-presentation',
+        loadChildren: () =>
+          import('./views/product-presentation/product-presentation.module').then((m) => m.ProductPresentationModule),
+      },
+      {
+        path: 'specification',
+        loadChildren: () =>
+          import('./views/specification/specification.module').then((m) => m.SpecificationModule),
+      },
+      {
+        path: 'specification-detail',
+        loadChildren: () =>
+          import('./views/specification-detail/specification-detail.module').then((m) => m.SpecificationDetailModule),
+      },
+      {
+        path: 'product-detail',
+        loadChildren: () =>
+          import('./views/product-detail/product-detail.module').then((m) => m.ProductDetailModule),
       },
       // {
       //   path: 'theme',
@@ -78,7 +137,7 @@ const routes: Routes = [
         loadChildren: () =>
           import('./views/pages/pages.module').then((m) => m.PagesModule),
         canActivate: [AuthenticationGuard]
-      }
+      },
     ]
   },
   {

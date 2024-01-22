@@ -42,28 +42,19 @@ export class DefaultLayoutComponent implements OnInit {
         badge: {
           color: 'info',
           text: 'NEW'
-        }
+        },
       },
       {
         title: true,
         name: 'Gestión de Almacén'
       },
-      {
-        name: 'Categoría',
-        url: '/management/category',
-        iconComponent: { name: 'cil-list' }
-      },
-      {
-        name: 'Subcategoría',
-        url: '/management/subcategory',
-        iconComponent: { name: 'cil-list' }
-      }
+    
     ]
     const modules = selectedRol.modules;
     modules.forEach(module => {
       const item = {
         name: module.module,
-        url: '',
+        url: module.url,
         iconComponent: {name: module.icon},
         children: module.views.map(view => {
           return {

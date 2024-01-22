@@ -3,6 +3,8 @@ import {HashLocationStrategy, LocationStrategy, PathLocationStrategy} from '@ang
 import {BrowserModule, Title} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ReactiveFormsModule} from '@angular/forms';
+import { environment } from '../environments/environment';
+import { API_BASE_URL } from './services/api/base.service';
 
 import {
   PERFECT_SCROLLBAR_CONFIG,
@@ -50,7 +52,6 @@ import {ToastrModule} from "ngx-toastr";
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {JwtInterceptor} from "./interceptors/jwt.interceptor";
 import {DirectivesModule} from "./directives/directives.module";
-
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -106,6 +107,10 @@ const APP_CONTAINERS = [
       useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG,
     },
     {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
+    {
+      provide: API_BASE_URL,
+      useValue: environment.host
+    },
     IconSetService,
     Title
   ],

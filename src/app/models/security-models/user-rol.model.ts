@@ -35,7 +35,11 @@ export class UserRolModel implements IProfileModel {
       this.profile = data['profile'];
       this.description = data['description'];
       this.code = data['code'];
-      this.modules = data['modules'] instanceof Array ? data['modules'].map(module => new ModuleModel(module)) : [];
+      const systems = data['systems'] instanceof Array ? data['systems'] : [];
+      const firstSystem = systems.length > 0 ? systems[0] : null;
+      this.modules = firstSystem && firstSystem['modules'] instanceof Array 
+      ? firstSystem['modules'].map(module => new ModuleModel(module)) 
+      : [];
     }
   }
 

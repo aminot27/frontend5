@@ -62,6 +62,7 @@ export class BaseService {
     }
     if (_method === this.PUT && !Number.isInteger(_viewModel)) {
       url = url + _id;
+      url += '/';
     }
     /**
      * finish block code
